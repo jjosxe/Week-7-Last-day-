@@ -106,8 +106,9 @@ def loop():
   
   # For example: "Hello Norville"
   
-  students = ["Norville", "Fred", "Velma", "Daphne"]
-  
+  # students = ["Norville", "Fred", "Velma", "Daphne"]
+  # for name in students:
+  #   print(f"Hello {name}")
   
   
   
@@ -115,7 +116,10 @@ def loop():
   # Given the following list of numbers, calculate the sum of all the numbers using For loops and store the result of the sum in a variable called sum_numbers:
   
   list_numbers = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]
-  # sum_numbers = 
+  sum_numbers = 0
+  for number in list_numbers:
+    sum_numbers = sum_numbers + number
+    print(f"Sum of list_numbers is {sum_numbers}")
   
   
   
@@ -125,6 +129,8 @@ def loop():
   # Given the following list of numbers, perform the sum of all even and odd* numbers separately in the variables sum_even and sum_odd respectively:
   
   list_numbers = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]
+  sum_numbers = 0
+  
   
   # *Recall from previous days: the modulus (or remainder) of a number divided by 2 is zero when said value is even, and 1 when it is odd
   
@@ -132,11 +138,16 @@ def loop():
   
   # num % 2 == 1 (odd values)
   
-  list_numbers = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]
+list_numbers = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]
   
-  # sum_even = 
+sum_even = 0
   
-  # sum_odd = 
+sum_odd = 0
 
-
-
+for num in list_numbers:
+  if num % 2 == 0:
+    sum_even = sum_even + num
+  elif num % 2 == 1:
+    sum_odd = sum_odd + num
+print(f"even are {sum_even}")
+print(f"odds are {sum_odd}")
